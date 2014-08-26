@@ -11,7 +11,7 @@ Simple drop cap plugin. Transform the first letter of a word into a drop cap sim
 
 == Description ==
 
-This plugin helps you transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap]. If you don't what a drop cap is please read [this article] (http://en.wikipedia.org/wiki/Initial " this article") from wikipedia.
+This plugin helps you transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap]. If you don't know what a drop cap is please read [this article] (http://en.wikipedia.org/wiki/Initial " this article") from wikipedia.
 
 = How to use this plugin: =
 
