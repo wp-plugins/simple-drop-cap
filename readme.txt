@@ -11,7 +11,7 @@ Simple drop cap plugin. Transform the first letter of a word into a drop cap sim
 
 == Description ==
 
-This plugin helps you transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap]. If you don't know what a drop cap is please read [this article] (http://en.wikipedia.org/wiki/Initial " this article") from wikipedia.
+This plugin helps you transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap]. If you don't know what a drop cap is please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
 
 = How to use this plugin: =
 
@@ -20,6 +20,8 @@ This plugin helps you transform the first letter of a word into a drop cap simpl
 3. For WP version below 3.9, you can manually put the shortcode between a word like this: [dropcap]word[/dropcap].
 
 == Installation ==
+
+= How to install this plugin: =
 
 1. Upload 'simple-drop-cap' to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the plugin dashboard.
