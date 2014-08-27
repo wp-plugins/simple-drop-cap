@@ -2,7 +2,7 @@
 /*
 Plugin Name: Simple Drop Cap
 Plugin URI: http://www.wordpress.org/
-Description: Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the [dropcap]word[/dropcap] with shortcode.
+Description: Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap].
 Author: Yudhistira Mauris
 Author URI: http://www.yudhistiramauris.com
 Version: 1.0
@@ -126,7 +126,7 @@ function wpsdc_settings_page()
 
 						<br>
 
-						<small><a href="http://wordpress.org/plugins/simple-drop-cap/screenshots/">Click here</a> for the example.</small>
+						<small><a href="http://wordpress.org/plugins/simple-drop-cap/screenshots/" target="_blank">Click here</a> for the example.</small>
 
 						<br>
 						<br>
@@ -135,7 +135,7 @@ function wpsdc_settings_page()
 
 						<br>
 
-						<small><a href="http://wordpress.org/plugins/simple-drop-cap/screenshots/">Click here</a> for the example.</small>
+						<small><a href="http://wordpress.org/plugins/simple-drop-cap/screenshots/" target="_blank">Click here</a> for the example.</small>
 					</td>
 				</tr>
 			</table>
