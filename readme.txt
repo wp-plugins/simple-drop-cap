@@ -7,17 +7,17 @@ Tested up to: 3.9.2
 Stable tag: 1.0
 License: GPLv2
 
-Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with [dropcap].
+Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap].
 
 == Description ==
 
-This plugin helps you transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap]. If you don't know what a drop cap is please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
+This plugin helps you transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap]. If you don't know what a drop cap is, please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
 
 = How to use this plugin: =
 
 1. For WP version 3.9 or higher, on post or page editing interface, select the word you want to transform into a drop cap.
 2. Click "Drop Cap" button which is located on tinymce editor tools.
-3. For WP version below 3.9, you can manually put the shortcode between a word like this: [dropcap]word[/dropcap].
+3. For WP version below 3.9, you can manually wrap a word with the shortcode like this: [dropcap]word[/dropcap].
 4. You can also use the dropcap shortcode on a widget.
 
 == Installation ==
