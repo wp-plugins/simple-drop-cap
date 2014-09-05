@@ -1,7 +1,7 @@
 <?php 
 /*
 Plugin Name: Simple Drop Cap
-Plugin URI: http://www.wordpress.org/
+Plugin URI: http://wordpress.org/plugins/simple-drop-cap/
 Description: Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap].
 Author: Yudhistira Mauris
 Author URI: http://www.yudhistiramauris.com
