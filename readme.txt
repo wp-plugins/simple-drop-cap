@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2
 
 Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap].
@@ -43,6 +43,9 @@ You can change it directly in simple-drop-cap.php file on line 133. Specific sty
 
 = 1.0 =
 * First official release
+
+= 1.0.1 =
+* Add prefix to variables
 
 == Upgrade Notice ==
 

@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/plugins/simple-drop-cap/
 Description: Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap].
 Author: Yudhistira Mauris
 Author URI: http://www.yudhistiramauris.com
-Version: 1.0
+Version: 1.0.1
 License: GPLv2
 */
 
@@ -45,26 +45,26 @@ if ( version_compare( $wp_version, '3.9', '>=' ) ) {
 function wpsdc_register_shortcode()
 {
 	// register shortcode [dropcap]word[/dropcap]
-	add_shortcode( 'dropcap', 'wpsdc' );
+	add_shortcode( 'dropcap', 'wpsdc_shortcode' );
 }
 
-// main function for wpsdc
-function wpsdc( $args, $content )
+// main function for wpsdc shortcode
+function wpsdc_shortcode( $args, $content )
 {
 	// left trim $content
-	$shortcoded_content = ltrim( $content );
+	$wpsdc_shortcoded_content = ltrim( $content );
 
 	// select first letter of shortcoded $content
-	$first_letter_of_shortcoded_content = substr( $shortcoded_content, 0, 1 );
+	$wpsdc_first_letter_of_shortcoded_content = substr( $wpsdc_shortcoded_content, 0, 1 );
 
 	// select remaining letters of shortcoded content
-	$remaining_letters_of_shortcoded_content = substr( $shortcoded_content, 1 );
+	$wpsdc_remaining_letters_of_shortcoded_content = substr( $wpsdc_shortcoded_content, 1 );
 
 	// add <span class="wpsdc"> to the first letter for shortcoded content
-	$spanned_first_letter = '<span class="wpsdc-drop-cap">' . $first_letter_of_shortcoded_content . '</span>';
+	$wpsdc_spanned_first_letter = '<span class="wpsdc-drop-cap">' . $wpsdc_first_letter_of_shortcoded_content . '</span>';
 
 	// return the spanned first letter and remaining letters
-	return $spanned_first_letter . $remaining_letters_of_shortcoded_content;
+	return $wpsdc_spanned_first_letter . $wpsdc_remaining_letters_of_wpsdc_shortcoded_content;
 }
 
 // funtion for wpsdc plugin menu
