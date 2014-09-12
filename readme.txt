@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2
 
 Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap].
@@ -50,6 +50,10 @@ You can change it directly in simple-drop-cap.php file on line 133. Specific sty
 = 1.0.3 =
 * Fix widget support
 * Cleaner code
+
+= 1.0.4 =
+* Fix dropcap in post excerpt
+* Use custom wp_trim_excerpt() function
 
 == Upgrade Notice ==
 
