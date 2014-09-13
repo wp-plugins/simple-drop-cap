@@ -31,7 +31,7 @@ This plugin helps you transform the first letter of a word into a drop cap simpl
 
 = How do I change the style of the drop cap? =
 
-You can change it directly in simple-drop-cap.php file on line 133. Specific style change feature will be added in the next version of the plugin.
+You can change it directly in 'includes/scripts.php' file on line 12. Specific style change feature probably will be added in the next version of the plugin.
 
 == Screenshots ==
 
