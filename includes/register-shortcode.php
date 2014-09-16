@@ -32,10 +32,10 @@ function wpsdc_shortcode( $args, $content )
 // do shortcode in a text widget
 add_filter( 'widget_text', 'do_shortcode' );
 
-// do shortcode in post excerpt
+// do shortcode in post excerpt, use cutom wp_trim_excerpt()
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'wpsdc_wp_trim_excerpt' );
-add_filter( 'the_excerpt', 'do_shortcode');
+add_filter( 'the_excerpt', 'do_shortcode' );
 
 // Copied from wp-includes/post-formatting.php
 function wpsdc_wp_trim_excerpt($text = '') {

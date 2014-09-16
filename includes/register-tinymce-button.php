@@ -17,10 +17,14 @@ function wpsdc_tinymce_button_init()
 		return;
 	}
 
+	/**
+	 * DEPRECATED
+	 * @since 1.0.5
+	 */
 	// check post type
-	if ( ! in_array( $typenow, array( 'post', 'page') ) ) {
+	/*if ( ! in_array( $typenow, array( 'post', 'page') ) ) {
 		return;
-	}
+	}*/
 
 	// check if WYSIWYG editor is enabled
 	if ( get_user_option( 'rich_editing' ) == 'true' ) {
