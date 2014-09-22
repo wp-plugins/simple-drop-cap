@@ -4,14 +4,14 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2
 
-Simple drop cap plugin. Transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap].
+Simple drop cap plugin. Transform the first letter of a word into a drop cap or initial letter simply by wrapping the word with shortcode [dropcap].
 
 == Description ==
 
-This plugin helps you transform the first letter of a word into a drop cap simply by surrounding the word with shortcode [dropcap]. If you don't know what a drop cap is, please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
+This plugin helps you transform the first letter of a word into a drop cap or initial letter simply by wrapping the word with shortcode [dropcap]. If you don't know what a drop cap is, please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
 
 = How to use this plugin: =
 
@@ -57,6 +57,9 @@ You can change it directly in 'includes/scripts.php' file on line 12. Specific s
 
 = 1.0.5 =
 * Enable dropcap button on all post type
+
+= 1.0.6 =
+* Add multi byte character support
 
 == Upgrade Notice ==
 

@@ -14,13 +14,13 @@ function wpsdc_register_shortcode()
 function wpsdc_shortcode( $args, $content )
 {
 	// left trim $content
-	$wpsdc_shortcoded_content = ltrim( $content );
+	$wpsdc_shortcoded_content = ltrim ( $content );
 
 	// select first letter of shortcoded $content
-	$wpsdc_first_letter_of_shortcoded_content = substr( $wpsdc_shortcoded_content, 0, 1 );
+	$wpsdc_first_letter_of_shortcoded_content = mb_substr( $wpsdc_shortcoded_content, 0, 1 );
 
 	// select remaining letters of shortcoded content
-	$wpsdc_remaining_letters_of_shortcoded_content = substr( $wpsdc_shortcoded_content, 1 );
+	$wpsdc_remaining_letters_of_shortcoded_content = mb_substr( $wpsdc_shortcoded_content, 1 );
 
 	// add <span class="wpsdc"> to the first letter for shortcoded content
 	$wpsdc_spanned_first_letter = '<span class="wpsdc-drop-cap">' . $wpsdc_first_letter_of_shortcoded_content . '</span>';
