@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.0.6
+Stable tag: 1.1.0
 License: GPLv2
 
 Simple drop cap plugin. Transform the first letter of a word into a drop cap or initial letter simply by wrapping the word with shortcode [dropcap].
@@ -14,6 +14,11 @@ Simple drop cap plugin. Transform the first letter of a word into a drop cap or 
 This plugin helps you transform the first letter of a word into a drop cap or initial letter simply by wrapping the word with shortcode [dropcap]. If you don't know what a drop cap is, please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
 
 = How to use this plugin: =
+
+1. Customize the settings on Simple Drop Cap settings page.
+2. For version 1.1 and later, you can transform the first letter of all posts, pages, and custom post types automatically.
+
+* If you want to do it manually: 
 
 1. For WP version 3.9 or higher, on post or page editing interface, select the word you want to transform into a drop cap.
 2. Click "Drop Cap" button which is located on tinymce editor tools.
@@ -29,9 +34,17 @@ This plugin helps you transform the first letter of a word into a drop cap or in
 
 == Frequently Asked Questions ==
 
+= Can I automatically transform the first letter of all posts into a drop cap? =
+
+Yes, you can. Enable drop cap automation option on Simple Drop Cap settings page.
+
+= How do I change the color of the drop cap? =
+
+For version 1.1 and later, you can change the drop cap color using color picker on Simple Drop Cap settings page.
+
 = How do I change the style of the drop cap? =
 
-You can change it directly in 'includes/scripts.php' file on line 12. Specific style change feature probably will be added in the next version of the plugin.
+For version 1.1 and later, you can change the style of the drop cap directly on Simple Drop Cap settings page using custom CSS.
 
 == Screenshots ==
 
@@ -61,6 +74,12 @@ You can change it directly in 'includes/scripts.php' file on line 12. Specific s
 = 1.0.6 =
 * Add multi byte character support
 
+= 1.1.0 =
+* Add custom color feature
+* Add custom CSS feature
+* Add drop cap automation feature for post, page, custom post type
+
 == Upgrade Notice ==
 
-Upgrade notice will be added for future upgrades.
+= 1.1.0 =
+* New features and improvement

@@ -11,7 +11,10 @@ function wpsdc_register_settings()
 
 	// set array of options
 	$wpsdc_options_arr = array(
-		'option_display_mode' => 'float'
+		'option_display_mode' => 'float',		
+		'option_font_color' => '',
+		'option_custom_css' => '',
+		'option_enable_all_posts' => ''
 	);
 
 	// insert the array of options into database
@@ -22,5 +25,8 @@ function wpsdc_register_settings()
 function wpsdc_sanitize_options( $input )
 {
 	$input['option_display_mode'] = wp_filter_nohtml_kses( $input['option_display_mode'] );
+	$input['option_font_size'] = sanitize_text_field( absint( $input['option_font_size'] ) );
+	$input['option_font_color'] = sanitize_text_field( $input['option_font_color'] );
+	$input['option_custom_css'] = esc_textarea( $input['option_custom_css'] );
 	return $input;
 }

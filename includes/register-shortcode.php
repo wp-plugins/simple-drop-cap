@@ -29,13 +29,39 @@ function wpsdc_shortcode( $args, $content )
 	return $wpsdc_spanned_first_letter . $wpsdc_remaining_letters_of_shortcoded_content;
 }
 
+// add filter to include shortcode to every post, page, and custom page
+$wpsdc_options = get_option( 'wpsdc_options' );
+if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['option_enable_all_posts'] == '1' ) {
+	remove_filter( 'the_content', 'wpautop' );
+	add_filter( 'the_content', 'wpsdc_filter_content' );
+
+	function wpsdc_filter_content( $content )
+	{
+		$content = str_replace('[dropcap]', '', $content);
+
+		$content = str_replace('[/dropcap]', '', $content);
+
+		$wpsdc_first_letter_of_filtered_content = mb_substr( $content, 0, 1);
+
+		$wpsdc_remaining_letters_of_filtered_content = mb_substr( $content, 1);
+
+		$wpsdc_dropcapped_first_letter = '[dropcap]' . $wpsdc_first_letter_of_filtered_content . '[/dropcap]';
+
+		// return all content
+		$content = $wpsdc_dropcapped_first_letter . $wpsdc_remaining_letters_of_filtered_content;
+
+		return $content;
+	}
+	add_filter( 'the_content', 'wpautop' );
+}
+
 // do shortcode in a text widget
 add_filter( 'widget_text', 'do_shortcode' );
 
 // do shortcode in post excerpt, use cutom wp_trim_excerpt()
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'wpsdc_wp_trim_excerpt' );
-add_filter( 'the_excerpt', 'do_shortcode' );
+// add_filter( 'the_excerpt', 'do_shortcode' );
 
 // Copied from wp-includes/post-formatting.php
 function wpsdc_wp_trim_excerpt($text = '') {
@@ -50,4 +76,13 @@ function wpsdc_wp_trim_excerpt($text = '') {
 		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
 	}
 	return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
+}
+
+add_filter( 'the_excerpt', 'wpsdc_filter_excerpt' );
+
+function wpsdc_filter_excerpt( $content )
+{
+	$content = str_replace( '[dropcap]', '', $content ); 
+	$content = str_replace( '[/dropcap]', '', $content );
+	return $content;
 }
