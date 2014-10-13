@@ -5,7 +5,7 @@
  * Description: Simple drop cap plugin. Transform the first letter of a word into a drop cap or initial letter simply by wrapping the word with shortcode [dropcap].
  * Author: Yudhistira Mauris
  * Author URI: http://www.yudhistiramauris.com
- * Version: 1.1.0
+ * Version: 1.1.1
  * License: GPLv2
  */
 

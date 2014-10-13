@@ -4,22 +4,22 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2
 
-Simple drop cap plugin. Transform the first letter of a word into a drop cap or initial letter simply by wrapping the word with shortcode [dropcap].
+Transform the first letter of a post into a drop cap or initial letter automatically or simply by wrapping the first word with shortcode [dropcap].
 
 == Description ==
 
-This plugin helps you transform the first letter of a word into a drop cap or initial letter simply by wrapping the word with shortcode [dropcap]. If you don't know what a drop cap is, please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
+This plugin helps you transform the first letter of a word into a drop cap or initial letter automatically or simply by wrapping the first word with shortcode [dropcap]. If you want to know more about drop cap, please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
 
 = How to use this plugin: =
 
-1. Customize the settings on Simple Drop Cap settings page.
-2. For version 1.1 and later, you can transform the first letter of all posts, pages, and custom post types automatically.
+1. Install and activate the plugin.
+2. Customize the settings on Simple Drop Cap settings page.
+3. For version 1.1 and later, you can transform the first letter of all posts, pages, and custom post types automatically by checking a checkbox on the settings page.
 
 * If you want to do it manually: 
-
 1. For WP version 3.9 or higher, on post or page editing interface, select the word you want to transform into a drop cap.
 2. Click "Drop Cap" button which is located on tinymce editor tools.
 3. For WP version below 3.9, you can manually wrap a word with the shortcode like this: [dropcap]word[/dropcap].
@@ -79,7 +79,13 @@ For version 1.1 and later, you can change the style of the drop cap directly on 
 * Add custom CSS feature
 * Add drop cap automation feature for post, page, custom post type
 
+= 1.1.1 =
+* Fix issues with other plugins that insert HTML tags into the_content
+
 == Upgrade Notice ==
 
 = 1.1.0 =
 * New features and improvement
+
+= 1.1.1 =
+* Bug fix
