@@ -13,6 +13,7 @@ function wpsdc_register_settings()
 	$wpsdc_options_arr = array(
 		'option_display_mode' => 'float',		
 		'option_font_color' => '',
+		'option_font_size' => '',
 		'option_custom_css' => '',
 		'option_enable_all_posts' => ''
 	);
