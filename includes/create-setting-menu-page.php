@@ -25,6 +25,8 @@ function wpsdc_settings_page()
 
 			And if you find this plugin helpful, please leave a review and comment <a href="http://wordpress.org/support/view/plugin-reviews/simple-drop-cap" target="_blank">here</a>. Thank you :)</p>
 
+			<p><strong>Note:</strong> Pro version is available now. More advanced features and better support. <a href="http://www.yudhistiramauris.com/products/simple-drop-cap-pro/" target="_blank">Get it now for the low price!</a></p>
+
 			<form method="post" action="options.php">
 
 				<?php settings_fields( 'wpsdc-settings-group' ); // set plugin option group for the form ?>

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2
 
 Transform the first letter of a post into a drop cap or initial letter automatically or simply by wrapping the first word with shortcode [dropcap].
@@ -12,6 +12,20 @@ Transform the first letter of a post into a drop cap or initial letter automatic
 == Description ==
 
 This plugin helps you transform the first letter of a word into a drop cap or initial letter automatically or simply by wrapping the first word with shortcode [dropcap]. If you want to know more about drop cap, please read [this article](http://en.wikipedia.org/wiki/Initial) from Wikipedia.
+
+= Pro version is available now! =
+
+Here are some features in pro version:
+
+* Enable drop cap transformation on per-post basis, per-post type basis, or all posts.
+* Check a box to enable or disable drop cap on a certain post. No need to use shortcode.
+* Shortcode is still available in pro version to create drop cap in text widget, post, etc.
+* Unlimited styles of drop cap. You can have different styles for every drop cap.
+* Intuitive design panel lets you to style your drop cap without knowing CSS or any single code.
+* Dedicated support forum, better support priority than the free version.
+* One-time low price payment license, no yearly payment.
+
+[Click here](http://www.yudhistiramauris.com/products/simple-drop-cap-pro/) for pro version screenshots!
 
 = How to use this plugin: =
 
