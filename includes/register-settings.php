@@ -29,5 +29,6 @@ function wpsdc_sanitize_options( $input )
 	$input['option_font_size'] = sanitize_text_field( absint( $input['option_font_size'] ) );
 	$input['option_font_color'] = sanitize_text_field( $input['option_font_color'] );
 	$input['option_custom_css'] = esc_textarea( $input['option_custom_css'] );
+	$input['option_enable_all_posts'] = wp_filter_nohtml_kses( $input['option_enable_all_posts'] );
 	return $input;
 }

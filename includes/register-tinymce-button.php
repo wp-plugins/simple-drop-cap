@@ -1,5 +1,5 @@
 <?php
-
+$wpsdc_options = get_option( 'wpsdc_options' );
 if ( $wpsdc_options['option_enable_all_posts'] != '1' ) {
 	// add drop cap tinymce button if WP version >= 3.9
 	global $wp_version;
