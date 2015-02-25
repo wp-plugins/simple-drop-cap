@@ -32,27 +32,55 @@ function wpsdc_shortcode( $args, $content )
 // add filter to include shortcode to every post, page, and custom page
 $wpsdc_options = get_option( 'wpsdc_options' );
 if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['option_enable_all_posts'] == '1' ) {
-	remove_filter( 'the_content', 'wpautop', 9 ); // add priority to 9 since 1.1.1
+	remove_filter( 'the_content', 'wpautop' ); // add priority to 9 since 1.1.1
 	add_filter( 'the_content', 'wpsdc_filter_content', 9 ); // add priority to 9 since 1.1.1 to make the_content drop capped first
 
 	function wpsdc_filter_content( $content )
 	{
-		$content = str_replace( '[dropcap]', '', $content );
+		if ( preg_match( '#^([A-Z]|[a-z]|[0-9])(.*\R)*(\R)*.*#', $content, $matches ) ) {			
+			$content = str_replace( '[dropcap]', '', $content );
 
-		$content = str_replace( '[/dropcap]', '', $content );
+			$content = str_replace( '[/dropcap]', '', $content );				
 
-		$wpsdc_first_letter_of_filtered_content = mb_substr( $content, 0, 1);
+			$top_content = str_replace( $matches[0], '', $content );
 
-		$wpsdc_remaining_letters_of_filtered_content = mb_substr( $content, 1);
+			$bottom_content = ltrim( $matches[0] );
 
-		$wpsdc_dropcapped_first_letter = '[dropcap]' . $wpsdc_first_letter_of_filtered_content . '[/dropcap]';
+			$wpsdc_first_letter_of_filtered_content = mb_substr( $bottom_content, 0, 1);
 
-		// return all content
-		$content = $wpsdc_dropcapped_first_letter . $wpsdc_remaining_letters_of_filtered_content;
+			$wpsdc_remaining_letters_of_filtered_content = mb_substr( $bottom_content, 1);
 
-		return $content;
+			$wpsdc_dropcapped_first_letter = '[dropcap]' . $wpsdc_first_letter_of_filtered_content . '[/dropcap]';
+			
+			$bottom_content = $wpsdc_dropcapped_first_letter . $wpsdc_remaining_letters_of_filtered_content;
+
+			return $top_content . $bottom_content;
+		} 
+
+		if ( preg_match( "#((<\w+(.*?)>)(.*?)(<?.*?>)?\R?)*#", $content, $matches ) ) {		
+			$content = str_replace( '[dropcap]', '', $content );
+
+			$content = str_replace( '[/dropcap]', '', $content );				
+
+			$top_content = $matches[0];			
+
+			$bottom_content = str_replace( $matches[0], '', $content );
+
+			$bottom_content = ltrim( $bottom_content );
+
+			$wpsdc_first_letter_of_filtered_content = mb_substr( $bottom_content, 0, 1);
+
+			$wpsdc_remaining_letters_of_filtered_content = mb_substr( $bottom_content, 1);
+
+			$wpsdc_dropcapped_first_letter = '[dropcap]' . $wpsdc_first_letter_of_filtered_content . '[/dropcap]';
+			
+			$bottom_content = $wpsdc_dropcapped_first_letter . $wpsdc_remaining_letters_of_filtered_content;
+
+			return $top_content . $bottom_content;			
+		}
+		return $content;		
 	}
-	add_filter( 'the_content', 'wpautop', 9 ); // add priority to 9 since 1.1.1
+	add_filter( 'the_content', 'wpautop', 11 ); // add priority to 9 since 1.1.1
 }
 
 // do shortcode in a text widget
