@@ -57,7 +57,7 @@ if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['optio
 			return $top_content . $bottom_content;
 		} 
 
-		if ( preg_match( "#((<\w+(.*?)>)(.*?)(<?.*?>)?\R?)*#", $content, $matches ) ) {		
+		if ( preg_match( '#((<\/?\w+(.*?)>)(.*?)(<?.*?>)?\R?)*#', $content, $matches ) ) {		
 			$content = str_replace( '[dropcap]', '', $content );
 
 			$content = str_replace( '[/dropcap]', '', $content );				
