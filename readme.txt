@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.1.1
-Stable tag: 1.1.6
+Stable tag: 1.2.0
 License: GPLv2
 
 Transform the first letter of a post into a drop cap or initial letter automatically or simply by wrapping the first word with shortcode [dropcap].
@@ -38,6 +38,12 @@ Here are some features in pro version:
 2. Click "Drop Cap" button which is located on tinymce editor tools.
 3. For WP version below 3.9, you can manually wrap a word with the shortcode like this: [dropcap]word[/dropcap].
 4. You can also use the dropcap shortcode on a widget.
+
+= Plugin Translation =
+
+As of version 1.2.0, this plugin supports translation. If you want to translate the plugin, contact me at mauris [at] yudhistiramauris [dot] com. Here are some available languages:
+
+* Serbian by [Ogi Djuraskovic](http://firstsiteguide.com/)
 
 == Installation ==
 
@@ -110,6 +116,11 @@ For version 1.1 and later, you can change the style of the drop cap directly on 
 
 = 1.1.6 =
 * Fix: improved regex rule to match html closing tag too.
+
+= 1.2.0 =
+* New feature: support plugin translation.
+* New feature: added Serbian (sr_RS) translation.
+* Fix: improved regex rule
 
 == Upgrade Notice ==
 
