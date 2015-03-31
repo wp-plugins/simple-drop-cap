@@ -63,18 +63,19 @@ if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['optio
 // do shortcode in a text widget
 add_filter( 'widget_text', 'do_shortcode' );
 
-// do shortcode in post excerpt, use cutom wp_trim_excerpt()
+// set priority to custom wp_trim_excerpt()
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'wpsdc_wp_trim_excerpt' );
-// add_filter( 'the_excerpt', 'do_shortcode' );
 
 // Copied from wp-includes/post-formatting.php
 function wpsdc_wp_trim_excerpt($text = '') {
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
 		$text = get_the_content('');
-		// $text = strip_shortcodes( $text );
-		// $text = apply_filters( 'the_content', $text );
+		$text = str_replace( '[dropcap]', '', $text ); 
+		$text = str_replace( '[/dropcap]', '', $text );
+		$text = strip_shortcodes( $text );
+		$text = apply_filters( 'the_content', $text );
 		$text = str_replace(']]>', ']]&gt;', $text);		
 		$excerpt_length = apply_filters( 'excerpt_length', 55 );		
 		$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
@@ -83,11 +84,11 @@ function wpsdc_wp_trim_excerpt($text = '') {
 	return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
 }
 
-add_filter( 'the_excerpt', 'wpsdc_filter_excerpt' );
+/*add_filter( 'the_excerpt', 'wpsdc_filter_excerpt' );
 
 function wpsdc_filter_excerpt( $content )
 {
 	$content = str_replace( '[dropcap]', '', $content ); 
 	$content = str_replace( '[/dropcap]', '', $content );
 	return $content;
-}
+}*/

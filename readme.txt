@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
 Tested up to: 4.1.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2
 
 Transform the first letter of a post into a drop cap or initial letter automatically or simply by wrapping the first word with shortcode [dropcap].
@@ -121,6 +121,9 @@ For version 1.1 and later, you can change the style of the drop cap directly on 
 * New feature: support plugin translation.
 * New feature: added Serbian (sr_RS) translation.
 * Fix: improved regex rule
+
+= 1.2.1 =
+* Fix: fixed text formatting on excerpt
 
 == Upgrade Notice ==
 
