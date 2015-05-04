@@ -39,7 +39,7 @@ if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['optio
 	{
 		$content = str_replace( '[dropcap]', '', $content );
 		$content = str_replace( '[/dropcap]', '', $content );						
-		if ( preg_match( '#(>|]|^)(([A-Z]|[a-z]|[0-9])(.*\R)*(\R)*.*)#m', $content, $matches ) ) {
+		if ( preg_match( '#(>|]|^)(([A-Z]|[a-z]|[0-9]|[\p{Any}])(.*\R)*(\R)*.*)#m', $content, $matches ) ) {
 
 			$top_content = str_replace( $matches[2], '', $content );
 
@@ -47,7 +47,11 @@ if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['optio
 
 			$wpsdc_first_letter_of_filtered_content = mb_substr( $bottom_content, 0, 1);
 
-			$wpsdc_remaining_letters_of_filtered_content = mb_substr( $bottom_content, 1);
+			if ( mb_substr( $bottom_content, 1, 1) === ' ' ) {
+				$wpsdc_remaining_letters_of_filtered_content = ' ' . mb_substr( $bottom_content, 2);
+			} else {
+				$wpsdc_remaining_letters_of_filtered_content = mb_substr( $bottom_content, 1);
+			}
 
 			$wpsdc_dropcapped_first_letter = '[dropcap]' . $wpsdc_first_letter_of_filtered_content . '[/dropcap]';
 			
