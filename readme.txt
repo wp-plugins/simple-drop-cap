@@ -3,8 +3,8 @@ Contributors: maurisrx
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D2ZLXZ8VQKPE2
 Tags: post, page, shortcode, edit, text, widget
 Requires at least: 3.0
-Tested up to: 4.1.1
-Stable tag: 1.2.2
+Tested up to: 4.2.1
+Stable tag: 1.2.3
 License: GPLv2
 
 Transform the first letter of a post into a drop cap or initial letter automatically or simply by wrapping the first word with shortcode [dropcap].
@@ -128,6 +128,9 @@ For version 1.1 and later, you can change the style of the drop cap directly on 
 = 1.2.2 =
 * Fix: better multi byte character support. Credit: @florinoprea.eu
 * Fix: add conditional check to decide drop capped character. Credit: @florinoprea.eu
+
+= 1.2.3 =
+* Fix: regex match for cyrillic characters
 
 == Upgrade Notice ==
 
