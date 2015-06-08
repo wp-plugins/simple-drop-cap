@@ -38,8 +38,8 @@ if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['optio
 	function wpsdc_filter_content( $content )
 	{
 		// $content = str_replace( '[dropcap]', '', $content );
-		// $content = str_replace( '[/dropcap]', '', $content );						
-		if ( preg_match( '#(>|]|^)(([A-Z]|[a-z]|[0-9]|[\p{L}])(.*\R)*(\R)*.*)#m', $content, $matches ) ) {
+		// $content = str_replace( '[/dropcap]', '', $content );
+		if ( preg_match( '#(>|]|^)(?:\s?)*(([A-Z]|[a-z]|[0-9]|[\p{L}])(.*\R)*(\R)*.*)#m', $content, $matches ) ) {
 
 			$top_content = str_replace( $matches[2], '', $content );
 
