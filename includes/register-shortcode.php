@@ -32,7 +32,7 @@ function wpsdc_shortcode( $args, $content )
 // add filter to include shortcode to every post, page, and custom page
 $wpsdc_options = get_option( 'wpsdc_options' );
 if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['option_enable_all_posts'] == '1' ) {
-	remove_filter( 'the_content', 'wpautop' ); // add priority to 9 since 1.1.1
+	// remove_filter( 'the_content', 'wpautop' ); // add priority to 9 since 1.1.1
 	add_filter( 'the_content', 'wpsdc_filter_content', 9 ); // add priority to 9 since 1.1.1 to make the_content drop capped first
 
 	function wpsdc_filter_content( $content )
@@ -61,7 +61,7 @@ if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['optio
 		} 		
 		return $content;		
 	}
-	add_filter( 'the_content', 'wpautop', 11 ); // add priority to 9 since 1.1.1
+	// add_filter( 'the_content', 'wpautop', 9 ); // add priority to 9 since 1.1.1
 }
 
 // do shortcode in a text widget
