@@ -32,14 +32,11 @@ function wpsdc_shortcode( $args, $content )
 // add filter to include shortcode to every post, page, and custom page
 $wpsdc_options = get_option( 'wpsdc_options' );
 if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['option_enable_all_posts'] == '1' ) {
-	// remove_filter( 'the_content', 'wpautop' ); // add priority to 9 since 1.1.1
 	add_filter( 'the_content', 'wpsdc_filter_content', 9 ); // add priority to 9 since 1.1.1 to make the_content drop capped first
 
 	function wpsdc_filter_content( $content )
 	{
-		// $content = str_replace( '[dropcap]', '', $content );
-		// $content = str_replace( '[/dropcap]', '', $content );
-		if ( preg_match( '#(>|]|^)(?:\s?)*(([A-Z]|[a-z]|[0-9]|[\p{L}])(.*\R)*(\R)*.*)#m', $content, $matches ) ) {
+		if ( preg_match( '#(^)(?:\s?)*(([A-Z]|[a-z]|[0-9]|[\p{L}])(.*\R)*(\R)*.*)#m', $content, $matches ) ) {
 
 			$top_content = str_replace( $matches[2], '', $content );
 
@@ -61,7 +58,6 @@ if ( isset( $wpsdc_options['option_enable_all_posts'] ) && $wpsdc_options['optio
 		} 		
 		return $content;		
 	}
-	// add_filter( 'the_content', 'wpautop', 9 ); // add priority to 9 since 1.1.1
 }
 
 // do shortcode in a text widget
@@ -87,12 +83,3 @@ function wpsdc_wp_trim_excerpt($text = '') {
 	}
 	return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
 }
-
-/*add_filter( 'the_excerpt', 'wpsdc_filter_excerpt' );
-
-function wpsdc_filter_excerpt( $content )
-{
-	$content = str_replace( '[dropcap]', '', $content ); 
-	$content = str_replace( '[/dropcap]', '', $content );
-	return $content;
-}*/
