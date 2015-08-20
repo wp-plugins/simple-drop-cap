@@ -26,8 +26,7 @@ jQuery(document).ready(function($) {
 			{
 				title : 'Insert Drop Cap',
 				cmd : 'wpsdc_insert_shortcode',
-				icon : false,
-				text : 'Drop Cap'
+				icon : 'dropcap',
 			});
 		}
 	});

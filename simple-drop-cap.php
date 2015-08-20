@@ -6,7 +6,7 @@
  * Author: Yudhistira Mauris
  * Author URI: http://www.yudhistiramauris.com
  * Text Domain: simple-drop-cap
- * Version: 1.2.7
+ * Version: 1.2.8
  * License: GPLv2
  * Domain Path: languages
  */
@@ -41,6 +41,7 @@ if ( ! defined( 'WPSDC_PLUGIN_FILE' ) ) {
 
 include ('includes/load-translation.php');
 include ('includes/register-shortcode.php');
+include ('includes/register-tinymce-button.php');
 include ('includes/create-setting-menu-page.php');
 include ('includes/register-settings.php');
 include ('includes/scripts.php');

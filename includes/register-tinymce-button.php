@@ -12,21 +12,10 @@ if ( $wpsdc_options['option_enable_all_posts'] != '1' ) {
 	// function for adding tinymce button
 	function wpsdc_tinymce_button_init()
 	{
-		global $typenow;
-		
 		// check user permission
 		if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
 			return;
 		}
-
-		/**
-		 * DEPRECATED
-		 * @since 1.0.5
-		 */
-		// check post type
-		/*if ( ! in_array( $typenow, array( 'post', 'page') ) ) {
-			return;
-		}*/
 
 		// check if WYSIWYG editor is enabled
 		if ( get_user_option( 'rich_editing' ) == 'true' ) {
@@ -55,4 +44,10 @@ if ( $wpsdc_options['option_enable_all_posts'] != '1' ) {
 		return $buttons;
 	}
 
+	add_action( 'admin_enqueue_scripts', 'wpsdc_load_admin_sytles' );
+
+	function wpsdc_load_admin_sytles()
+	{
+		wp_enqueue_style( 'wpsdc_admin', plugin_dir_url( WPSDC_PLUGIN_FILE ) . 'includes/css/admin-styles.css', array(), '1.2.7' );
+	}
 }
